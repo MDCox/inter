@@ -1,6 +1,7 @@
 module.exports = (grunt)->
   # Can work with coffeescript
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-simple-mocha'
 
   # Configuration of tasks
   grunt.initConfig
@@ -16,8 +17,15 @@ module.exports = (grunt)->
         ext: '.js'
 
     # Task to run tests
-    test:{}
+    simplemocha:
+      options:
+        globals: ['expect']
+        timeout: 3000
+        ignoreLeaks: false
+        ui: 'bdd'
+        reporter: 'tap'
+      all: src: ['tests/*.coffee']
 
   # Declare tasks
   grunt.registerTask 'default', ["coffee"]
-  grunt.registerTask 'test', []
+  grunt.registerTask 'test', ["simplemocha"]
