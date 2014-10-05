@@ -1,4 +1,4 @@
-$i =
+class $i
   ##################################
   #          Internals             #
   ##################################
@@ -25,3 +25,6 @@ $i =
   add: (tag)->
     @el = [document.createElement tag]
     @
+# Exports to whatever the upper context is.
+# "Window" in browsers
+(exports ? @).$i = new $i
