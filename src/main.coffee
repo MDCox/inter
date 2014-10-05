@@ -21,7 +21,7 @@ window.$i =
       el.setAttribute attr, data
     @
 
-  # Add an element to DOM
+  # Add an element to DOM inside @el
   add: (tag)->
-    @el = [document.createElement tag]
+    @el = [@el.appendChild document.createElement tag]
     @

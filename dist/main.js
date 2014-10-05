@@ -15,7 +15,7 @@
       return this;
     },
     add: function(tag) {
-      this.el = [document.createElement(tag)];
+      this.el = [this.el.appendChild(document.createElement(tag))];
       return this;
     }
   };
