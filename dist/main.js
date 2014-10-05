@@ -15,6 +15,10 @@
         el.setAttribute(attr, data);
       }
       return this;
+    },
+    add: function(tag) {
+      this.el = [document.createElement(tag)];
+      return this;
     }
   };
 

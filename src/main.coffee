@@ -20,3 +20,8 @@ $i =
     for el in @el
       el.setAttribute attr, data
     @
+
+  # Add an element to DOM
+  add: (tag)->
+    @el = [document.createElement tag]
+    @
