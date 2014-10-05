@@ -1,21 +1,17 @@
 {
   "name": "inter",
   "version": "0.1.0",
-  "description": "Extremely minimal lib that lets you interact directly with a page",
+  "description": "Minimal lib for interacting with the DOM",
   "main": "index.coffee",
-  "scripts": {
-    "test": "coffee -co js . && cp -R tests/data js/tests/data && istanbul cover node_modules/mocha/bin/_mocha -- -t 10000 --recursive js/tests -R spec -r should && cp README.md package.json js/"
-  },
   "repository": {
     "type": "git",
-    "url": "https://mdcox@bitbucket.org/mdcox/inter.git"
+    "url": "https://github.com/mdcox/inter.git"
   },
   "keywords": [],
   "author": "Matt Cox",
-  "license": "MIT",
+  "license": "Beerware",
   "dependencies": {
     "async": "~0.2.9",
-    "winston": "~0.7.2"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

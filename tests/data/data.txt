@@ -1,3 +1,0 @@
-Folder of my location should contain data for your test, if needed.
-Otherwise, please remove "data" folder and update "test" command in package.json.
- 
