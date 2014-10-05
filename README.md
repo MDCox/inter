@@ -1,7 +1,7 @@
 inter
 ===========
 
-Minimal lib for interacting with the DOM
+Minimal lib for DOM interaction
 
 Implements common js functions without having to rely on a large library like jQuery or an even larger framework.
 Designed so you can easily remove pieces that you do not use to further minimize lib size.
