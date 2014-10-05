@@ -25,7 +25,15 @@ module.exports = (grunt)->
         ui: 'bdd'
         reporter: 'tap'
       all: src: ['tests/*.coffee']
+  ###################################
+  #         Declare tasks           #
+  ###################################
 
-  # Declare tasks
+  # Builds inter
   grunt.registerTask 'default', ["coffee"]
-  grunt.registerTask 'test', ["simplemocha"]
+
+  # Builds and then tests inter.
+  # Because the tests always run the dist file, we know
+  # that it will never be pushed with a broken (out of
+  # date) dist file.
+  grunt.registerTask 'test', [ "coffee", "simplemocha"]
