@@ -8,7 +8,12 @@
       return this;
     },
     set: function(attr, data) {
-      this.el[0].setAttribute(attr, data);
+      var el, _i, _len, _ref;
+      _ref = this.el;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        el = _ref[_i];
+        el.setAttribute(attr, data);
+      }
       return this;
     }
   };

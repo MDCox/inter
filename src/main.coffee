@@ -17,5 +17,6 @@ $i =
 
   # Set an attribute on an element
   set: (attr, data)->
-    @el[0].setAttribute attr, data
+    for el in @el
+      el.setAttribute attr, data
     @
