@@ -3,7 +3,7 @@ $i =
   #          Internals             #
   ##################################
 
-  # The last selected element
+  # Current selected element/collection of elements
   el: null
 
   ###################################
